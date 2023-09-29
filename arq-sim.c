@@ -66,13 +66,19 @@ void execute_instruction(Instruction instr)
 		printf("Resultado: %d", reg[Instruction.rd]);
 		break;
 	case 1:
-
+		printf("Operação de Subtração, opcode: %d", instr.opcode);
+		reg[Instruction.rd] = reg[Instruction.rs1] - reg[Instruction.rs2];
+		printf("Resultado: %d", reg[Instruction.rd]);
 		break;
 	case 2:
-
+		printf("Operação de Subtração, opcode: %d", instr.opcode);
+		reg[Instruction.rd] = reg[Instruction.rs1] * reg[Instruction.rs2];
+		printf("Resultado: %d", reg[Instruction.rd]);
 		break;
 	case 3:
-
+		printf("Operação de Subtração, opcode: %d", instr.opcode);
+		reg[Instruction.rd] = reg[Instruction.rs1] / reg[Instruction.rs2];
+		printf("Resultado: %d", reg[Instruction.rd]);
 		break;
 	case 4:
 
@@ -118,7 +124,7 @@ void execute_instruction(Instruction instr)
 	}
 }
 
-int main()
+int main(int argc, char **argv)
 {
 
 	int escolha;
